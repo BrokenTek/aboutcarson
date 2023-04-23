@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #6a67ce;
+            color: #FFFFFF;
+            border: 0px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #output {
+            background-color: #F9F9F9;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+            line-height: 30px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+    <title>JavaScript Speech to Text</title>
+</head>
+
+<body>
+    <p id="tes"></p>
+    <h2>JavaScript Speech to Text</h2>
+    <p>Click on the below button and speak something...</p>
+    <p><button type="button" onclick="runSpeechRecognition()">Speech to Text</button> &nbsp; <span id="action"></span>
+    </p>
+    <div id="output" class="hide"></div>
+    <script>
+        
+        function runSpeechRecognition(){
+            var output=document.getElementById("output");
+            var action=document.getElementById("action");
+            var SpeechRecognition=SpeechRecognition||webkitSpeechRecognition;
+            var recognition=new SpeechRecognition();
+
+            recognition.onstart=function(){
+                action.innerHTML="<small>listening, please speak...</small>";
+            };
+
+            recognition.onspeechend=function(){
+                action.innerHTML="<small>stopped listening, hope you are done...</small>";
+                recognition.stop();
+            }
+
+            recognition.onresult=function(event){
+                var transcript=event.results[0][0].transcript;
+                var confidence=event.results[0][0].confidence;
+                output.innerHTML="<b>Text:</b> " + transcript + "<br/> <b>Confidence:</b> " + confidence  * 100 + "%";
+                output.classList.remove("hide");
+            };
+
+            recognition.start();
+        }
+
+
+
+        // added by me
+        function parseResult(){
+
+            // get the transcript result as a string to parse
+            var transcript = document.getElementById("output").innerHTML;
+
+            // get the keyword
+            var keyword = "hello";
+
+            // get the index of the keyword
+            var index = transcript.indexOf(keyword);
+
+            // get the length of the transcript
+            var length = transcript.length;
+
+            
+
+
+            // get the substring of the transcript from the index of the keyword to the end of the transcript
+
+            // get the substring of the transcript from the beginning of the transcript to the index of the keyword
+
+            // get the substring of the transcript from the index of the keyword to the index of the keyword plus the length of the keyword
+
+            // get the substring of the transcript from the index of the keyword plus the length of the keyword to the end of the transcript
+
+            
+            // get the substring of the transcript from the index of the keyword plus the length of the keyword to the end of the transcript
+
+            // get the substring of the transcript from the index of the keyword plus the length of the keyword to the end of the transcript
+
+            // get the substring of the transcript from the index of the keyword plus the length of the keyword to the end of the transcript
+
+
+        }
+        
+    </script>
+
+    <hr>
+    <button type="button" onclick="parseResult()">Parse Result</button> &nbsp; <span id="tes"></span>
+
+    <script>
+        // added by me
+        
+        document.getElementById("tes").innerHTML = grammer;
+    </script>
+</body>
+
+</html>

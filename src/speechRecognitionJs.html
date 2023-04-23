@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html alng="en"> 
+<head>
+    <meta charset="utf-8">
+    <title>Speech Recognition</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/addons/p5.dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/addons/p5.sound.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/addons/p5.speech.js"></script>
+    <script>
+        // new speech recognition object
+        var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+        var recognition = new SpeechRecognition();
+        
+        // This runs when the speech recognition service starts
+        recognition.onstart = function() {
+            console.log("We are listening. Try speaking into the microphone.");
+        };
+        
+        recognition.onspeechend = function() {
+            // when user is done speaking
+            recognition.stop();
+        }
+        
+        // This runs when the speech recognition service returns result
+        recognition.onresult = function(event) {
+            var transcript = event.results[0][0].transcript;
+            var confidence = event.results[0][0].confidence;
+        };
+        
+        // start recognition
+        recognition.start();
+    </script>
+</head>
+<body>
+
+    <h2 style="font-family: 'Courier New', Courier, monospace">Speech Recognition Sample</h2>
+
+    
+</body>
+
+</html> 

@@ -1,0 +1,6 @@
+{
+    "audioCues.lineHasError": "auto",
+    "audioCues.lineHasInlineSuggestion": "auto",
+    "audioCues.diffLineInserted": "auto",
+    "audioCues.volume": 0
+}
