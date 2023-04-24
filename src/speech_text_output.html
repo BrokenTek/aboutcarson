@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Resources/css/styles.css">
+    </style>
+
+    <title>Allow microphone access (Uses An Open Source Maven ) </title>
+</head>
+
+<body>
+<div id="header_wrap" class="outer">
+    <header>
+    <h1>JavaScript Speech to Text</h1>
+    <span>Click on the microphone icon below to have you speech<br> read into string data with punctuation removed. Is censored.</span>
+    </header>
+</div>
+<!-- <button type="button">Speech to Text</button> -->
+    <p> &nbsp; <span id="action"></span> &nbsp; <span id="run_func"></span> &nbsp; <span id="result"></span> &nbsp; <span id="error"></span> &nbsp; </p>
+    <svg onclick="runSpeechRecognition()" class="mic_icn" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="heroicons-solid/microphone">
+        <g id="Union">
+            <path d="M8.25 4.5C8.25 2.42893 9.92893 0.75 12 0.75C14.0711 0.75 15.75 2.42893 15.75 4.5V12.75C15.75 14.8211 14.0711 16.5 12 16.5C9.92893 16.5 8.25 14.8211 8.25 12.75V4.5Z" fill="black"/>
+            <path d="M6 10.5C6.41421 10.5 6.75 10.8358 6.75 11.25V12.75C6.75 15.6495 9.1005 18 12 18C14.8995 18 17.25 15.6495 17.25 12.75V11.25C17.25 10.8358 17.5858 10.5 18 10.5C18.4142 10.5 18.75 10.8358 18.75 11.25V12.75C18.75 16.2244 16.125 19.0857 12.75 19.4588V21.75H15.75C16.1642 21.75 16.5 22.0858 16.5 22.5C16.5 22.9142 16.1642 23.25 15.75 23.25H8.25C7.83579 23.25 7.5 22.9142 7.5 22.5C7.5 22.0858 7.83579 21.75 8.25 21.75H11.25V19.4588C7.87504 19.0857 5.25 16.2244 5.25 12.75V11.25C5.25 10.8358 5.58579 10.5 6 10.5Z" fill="black"/>
+        </g>
+        </g>
+    </svg>
+    </p>
+    <div id="output" class="hide"></div>
+
+    <hr>
+    <button type="button" onclick="parseResult()">Parse Result</button> &nbsp; <p><span id="tes"><em>Speech goes here</em>.<br> Dog breeds will soon be listed to 
+    showcase API sample<br> usage of the <strong>Speech To Text</strong> and the myriad of solutions it can integrate<br> with to increase accessibility and
+    allow for faster/effective learning results.  
+    </span></p>
+    <object type="image/svg+xml" data="Resources/images/label_banner.svg"></object>
+    <script>
+        
+        function runSpeechRecognition(){
+            var output=document.getElementById("output");
+            var action=document.getElementById("action");
+            var SpeechRecognition=SpeechRecognition||webkitSpeechRecognition;
+            var recognition=new SpeechRecognition();
+
+            recognition.onstart=function(){
+                action.innerHTML="<small>listening, please speak...</small>";
+            };
+
+            recognition.onspeechend=function(){
+                action.innerHTML="<small>stopped listening, hope you are done...</small>";
+                recognition.stop();
+            }
+
+            recognition.onresult=function(event){
+                var transcript=event.results[0][0].transcript;
+                var confidence=event.results[0][0].confidence;
+                output.innerHTML="<b>Text:</b> " + transcript + "<br/> <b>Confidence:</b> " + confidence  * 100 + "%";
+                output.classList.remove("hide");
+            };
+
+            recognition.start();
+        }
+
+        function parseResult(){
+
+            // get the transcript result as a string to parse
+            var transcript = document.getElementById("output").innerHTML.trim();
+
+            // get the keyword
+            var keyword = "hello";
+
+            // get the index of the keyword
+            var index = transcript.indexOf(keyword);
+
+            // get the length of the transcript
+            var length = transcript.length;
+
+            // get the substring of the transcript from the beginning of the transcript to the index of the keyword
+            var first = transcript.substring(0, index);
+
+            // get the substring of the transcript from the index of the keyword to the end of the transcript
+            var last = transcript.substring(index + keyword.length, length);
+
+            // get the substring of the transcript from the beginning of the transcript to the index of the keyword
+            var first = transcript.substring(0, index);
+
+            // get the substring of the transcript from the index of the keyword to the index of the keyword plus the length of the keyword
+            var middle = transcript.substring(index, index + keyword.length);
+
+            // get the substring of the transcript from the index of the keyword plus the length of the keyword to the end of the transcript
+            var last = transcript.substring(index + keyword.length, length);
+
+            // get the substring of the transcript from the beginning of the transcript to the index of the keyword
+            var first = transcript.substring(0, index);
+
+            alert("First - Middle - Last: " + first + " - " + middle + " - " + last);
+            return "Found an instance of the keyword: " + middle + " at index: " + index + " in the transcript: " + transcript;
+
+        }
+
+        // var parsedResult = parseResult();
+        // document.getElementById("tes").innerHTML = parsedResult;
+    </script>
+</body>
+
+</html>
