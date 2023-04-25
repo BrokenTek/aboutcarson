@@ -764,7 +764,13 @@ kbd {
     background: #212121;
 }
 
-div.scroll {
+.scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#breed_list {
     color: #c6cbd1;
     margin:4px, 4px;
     padding:4px;
@@ -773,7 +779,7 @@ div.scroll {
     height: 20em;
     overflow-x: hidden;
     overflow-y: auto;
-    text-align:justify;
+    text-align: justify;
     border-radius: 5px;
 }
 

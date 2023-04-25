@@ -1,5 +1,7 @@
 ### Codespaces and General ###
 .devcontainer/
+privatesandbox/
+node_modules/
 
 ### VisualStudioCode ###
 .vscode/*
@@ -12,8 +14,10 @@
 ### Direcotry ###
 deprecated/
 ignored/
+configuration/
 
 ### Files Exts ###
+*.env
 *.log
 *.cache
 *.dat
