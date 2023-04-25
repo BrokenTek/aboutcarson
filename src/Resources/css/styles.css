@@ -522,9 +522,7 @@ p img {
 
 img:hover,
 img:focus {
-    /* Decrease the opacity of the image */
-    opacity: 0.8;
-    /* Add a transition effect (feel free to experiment with different values) */
+    opacity: 0.9;
     transition: opacity 0.5s ease;
 }
 
@@ -648,6 +646,11 @@ kbd {
     padding: 20px 10px;
     margin: 0 auto;
     text-align: center;
+}
+
+#doggo_logo {
+    /* width:auto; */
+    height: 6em;
 }
 
 #git_page_banner {
