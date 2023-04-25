@@ -1,0 +1,54 @@
+### Codespaces and General ###
+.devcontainer/
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+### Direcotry ###
+deprecated/
+ignored/
+
+### Files Exts ###
+*.log
+*.cache
+*.dat
+*.db
+*.iso
+*.jar
+*.json
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+
+### Files ###
+config.*
+config.js
+config.json
+config.yaml
+config.yml
+config.xml
+config.ini
+
+### Package ###
+package-lock.json
+package.json
+
+
+### Temp ###
+*.tmp
+*.temp
+
+### Test ###
+test/
+tests/
+__tests__/
+
+
