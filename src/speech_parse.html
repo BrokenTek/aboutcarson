@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Testing</title>
+        <!-- <script src="speech_parser.js" defer></script> -->
+        <script type="text/javascript" src="speech_parser.js" defer></script>
+    </head>
+    <body>
+        <!-- <h1>Testing Speech</h1>
+        <div id="output_div">
+            <p id="output"></p>
+        </div>
+        <div id="button_div">
+            <button id="start_button">Start</button>
+            <button id="stop_button">Stop</button>
+        </div> -->
+
+          
+        <form action="https://dog.ceo/api/breed/husky/images/random" method="fetch">
+            <input type="search" id="q" name="q" size=60>
+            <input type="button" value="Click to Speak" onclick="recognition.start()">
+        </form>
+
+    </body>
+
+</html>
