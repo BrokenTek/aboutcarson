@@ -3,6 +3,11 @@
 
 This is a simple repository that will host my GitHub Pages portfolio. This is a simple front-end site that will be a resource that I intend to use as a way to showcase my skills while providing some general information about myself.
 
+## Description
+
+This repository will host my GitHub pages *AboutMe* personal tech portfolio and self-descriptive information/links. This will include relative information for tech industry employment and collaboration showcasing. I love working in a team environment with passionate individuals. This simple front-end site will be a resource that I intend to use as a way to showcase my skills while providing some general information about myself.
+
+
 ## Table of Contents
 
 - [About Me, Carson!](#about-me-carson)
@@ -16,9 +21,6 @@ This is a simple repository that will host my GitHub Pages portfolio. This is a 
   - [Testing](#testing)
   - [Questions](#questions)
 
-## Description
-
-This repository will host my GitHub pages *AboutMe* personal tech portfolio and self-descriptive information/links. This will include relative information for tech industry employment and collaboration showcasing. I love working in a team environment with passionate individuals. This simple front-end site will be a resource that I intend to use as a way to showcase my skills while providing some general information about myself.
 
 ## Installation
 
@@ -42,8 +44,8 @@ No testing is required for this repository.
 
 ## Questions
 
-If you have any questions or issues, feel free to reach out to me via GitHub or email.
+If you have any questions or issues, feel free to reach out to me via GitHub!
 
-GitHub: [carsoncurry](
+GitHub: [BrokenTek GitHub Account Page](https://github.com/brokentek)
 
-This repository will host my GitHub pages *AboutMe* personal tech portfolio and self-descriptive information/links. This will include relative information for tech industry employment and collaboration showcasing. I love working in a team environment with passionate individuals. This simple front-end site will be a resource that I intend to use as a way to showcase my skills while providing some general information about myself.
+
