@@ -18,6 +18,8 @@
 
 This is a simple repository that will host my GitHub Pages portfolio. This is a simple front-end site that will be a resource that I intend to use as a way to showcase my skills while providing some general information about myself.
 
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
+
 ## Description
 
 This repository will host my GitHub pages *AboutMe* personal tech portfolio and self-descriptive information/links. This will include relative information for tech industry employment and collaboration showcasing. I love working in a team environment with passionate individuals. This simple front-end site will be a resource that I intend to use as a way to showcase my skills while providing some general information about myself.
